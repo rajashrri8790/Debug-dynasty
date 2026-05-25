@@ -1,0 +1,90 @@
+<div class="layout-page">
+
+  <!-- Sidebar -->
+
+  <aside class="sidebar">
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+      <h1>StayEase</h1>
+
+    </div>
+
+    <!-- Menu -->
+
+    <ul class="menu">
+
+      <li
+        *ngFor="let item of sidebarItems"
+
+        routerLink="{{ item.route }}"
+
+        routerLinkActive="active">
+
+        <span class="icon">
+
+          {{ item.icon }}
+
+        </span>
+
+        <span>
+
+          {{ item.title }}
+
+        </span>
+
+      </li>
+
+    </ul>
+
+  </aside>
+
+  <!-- Main Section -->
+
+  <div class="main-section">
+
+    <!-- Topbar -->
+
+    <header class="topbar glass-card">
+
+      <div>
+
+        <h2>Admin Panel</h2>
+
+        <p>
+          Manage luxury hotel bookings
+        </p>
+
+      </div>
+
+      <div class="profile">
+
+        <img
+          src="https://i.pravatar.cc/100"
+          alt="Admin">
+
+        <div>
+
+          <h4>Admin</h4>
+
+          <span>Administrator</span>
+
+        </div>
+
+      </div>
+
+    </header>
+
+    <!-- Page Content -->
+
+    <main class="content glass-card">
+
+      <router-outlet></router-outlet>
+
+    </main>
+
+  </div>
+
+</div>

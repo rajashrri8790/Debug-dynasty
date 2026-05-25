@@ -1,0 +1,165 @@
+.dashboard-page{
+  display:flex;
+  min-height:100vh;
+  background:#F8FAFC;
+}
+
+.sidebar{
+  width:260px;
+  background:#0F172A;
+  color:white;
+  padding:30px 20px;
+}
+
+.sidebar h2{
+  font-size:2rem;
+  margin-bottom:40px;
+}
+
+.sidebar ul{
+  list-style:none;
+  padding:0;
+}
+
+.sidebar li{
+  padding:15px;
+  margin-bottom:10px;
+  border-radius:12px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.sidebar li:hover{
+  background:#2563EB;
+}
+
+.main-content{
+  flex:1;
+  padding:30px;
+}
+
+.glass-card{
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(12px);
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.topbar{
+  padding:20px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.profile-btn{
+  border:none;
+  padding:10px 25px;
+  border-radius:12px;
+  background:
+  linear-gradient(
+    135deg,
+    #2563EB,
+    #06B6D4
+  );
+  color:white;
+  font-weight:600;
+}
+
+.cards-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-bottom:30px;
+}
+
+.dashboard-card{
+  padding:30px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.dashboard-card:hover{
+  transform:translateY(-5px);
+}
+
+.icon{
+  font-size:3rem;
+  margin-bottom:15px;
+}
+
+.dashboard-card h2{
+  font-size:2rem;
+  color:#2563EB;
+}
+
+.analytics-section{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  margin-bottom:30px;
+}
+
+.chart-card{
+  padding:25px;
+}
+
+.chart-placeholder{
+  height:250px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:1.5rem;
+  color:#64748B;
+}
+
+.bookings-section{
+  padding:25px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+}
+
+th,
+td{
+  padding:15px;
+  text-align:left;
+}
+
+th{
+  background:#2563EB;
+  color:white;
+}
+
+tr:nth-child(even){
+  background:#F1F5F9;
+}
+
+.status{
+  background:#DCFCE7;
+  color:#16A34A;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:0.9rem;
+}
+
+@media(max-width:900px){
+
+  .dashboard-page{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    width:100%;
+  }
+
+  .analytics-section{
+    grid-template-columns:1fr;
+  }
+
+}

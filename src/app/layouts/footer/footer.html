@@ -1,0 +1,88 @@
+<footer class="footer-section">
+
+  <div class="footer-container">
+
+    <!-- Logo -->
+
+    <div class="footer-about">
+
+      <h1>StayEase</h1>
+
+      <p>
+        Experience futuristic luxury hotel booking with premium comfort and world-class hospitality.
+      </p>
+
+    </div>
+
+    <!-- Quick Links -->
+
+    <div class="footer-links">
+
+      <h2>Quick Links</h2>
+
+      <ul>
+
+        <li
+          *ngFor="let link of quickLinks">
+
+          <a
+            [routerLink]="link.route">
+
+            {{ link.title }}
+
+          </a>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+    <!-- Contact -->
+
+    <div class="footer-contact">
+
+      <h2>Contact</h2>
+
+      <p>📍 Bangalore, India</p>
+
+      <p>📞 +91 9876543210</p>
+
+      <p>✉️ support@stayease.com</p>
+
+    </div>
+
+    <!-- Social -->
+
+    <div class="footer-social">
+
+      <h2>Follow Us</h2>
+
+      <div class="social-icons">
+
+        <span
+          *ngFor="let social of socialLinks">
+
+          {{ social.icon }}
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+
+  <div class="footer-bottom">
+
+    <p>
+
+      © 2026 StayEase. All Rights Reserved.
+
+    </p>
+
+  </div>
+
+</footer>

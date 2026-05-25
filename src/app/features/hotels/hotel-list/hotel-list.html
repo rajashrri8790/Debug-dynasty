@@ -1,0 +1,102 @@
+<div class="hotel-list-page">
+
+  <!-- Header -->
+
+  <div class="header-section">
+
+    <h1>Explore Luxury Hotels</h1>
+
+    <p>
+      Find the best premium stays worldwide
+    </p>
+
+  </div>
+
+  <!-- Search -->
+
+  <div class="search-section glass-card">
+
+    <input
+      type="text"
+      placeholder="Search hotels, locations...">
+
+    <button>
+
+      Search
+
+    </button>
+
+  </div>
+
+  <!-- Hotel Grid -->
+
+  <div class="hotel-grid">
+
+    <div
+      class="hotel-card glass-card"
+      *ngFor="let hotel of hotels">
+
+      <!-- Image -->
+
+      <div class="hotel-image">
+
+        <img
+          [src]="hotel.image"
+          alt="Hotel">
+
+        <div class="rating">
+
+          ⭐ {{ hotel.rating }}
+
+        </div>
+
+      </div>
+
+      <!-- Content -->
+
+      <div class="hotel-content">
+
+        <h2>
+          {{ hotel.hotelName }}
+        </h2>
+
+        <p class="location">
+
+          📍 {{ hotel.location }}
+
+        </p>
+
+        <p class="description">
+
+          {{ hotel.description }}
+
+        </p>
+
+        <!-- Bottom -->
+
+        <div class="bottom-section">
+
+          <div class="price">
+
+            ₹{{ hotel.price }}
+
+            <span>/ night</span>
+
+          </div>
+
+          <button
+            routerLink="/hotel-details">
+
+            View Details
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

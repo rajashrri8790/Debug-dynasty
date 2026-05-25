@@ -1,0 +1,46 @@
+<div class="chart-page">
+
+  <div class="chart-container glass-card">
+
+    <!-- Header -->
+
+    <div class="chart-header">
+
+      <div>
+
+        <h2>Revenue Analytics</h2>
+
+        <p>
+          Monthly hotel booking revenue overview
+        </p>
+
+      </div>
+
+      <button class="export-btn">
+
+        Export Report
+
+      </button>
+
+    </div>
+
+    <!-- Chart -->
+
+    <div class="chart-wrapper">
+
+      <canvas
+        baseChart
+
+        [data]="barChartData"
+
+        [options]="barChartOptions"
+
+        [type]="'bar'">
+
+      </canvas>
+
+    </div>
+
+  </div>
+
+</div>

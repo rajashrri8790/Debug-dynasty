@@ -1,0 +1,173 @@
+<div class="booking-page">
+
+  <div class="booking-container glass-card">
+
+    <!-- Left -->
+
+    <div class="booking-left">
+
+      <h1>StayEase</h1>
+
+      <p>
+        Book your luxury hotel experience
+      </p>
+
+      <img
+        src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+        alt="Hotel">
+
+    </div>
+
+    <!-- Right -->
+
+    <div class="booking-right">
+
+      <h2>Book Your Stay</h2>
+
+      <p class="subtitle">
+        Complete your reservation details
+      </p>
+
+      <form [formGroup]="bookingForm">
+
+        <!-- Full Name -->
+
+        <div class="mb-3">
+
+          <label>Full Name</label>
+
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Full Name"
+            formControlName="fullName">
+
+        </div>
+
+        <!-- Email -->
+
+        <div class="mb-3">
+
+          <label>Email</label>
+
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Enter Email"
+            formControlName="email">
+
+        </div>
+
+        <!-- Check In -->
+
+        <div class="mb-3">
+
+          <label>Check-In Date</label>
+
+          <input
+            type="date"
+            class="form-control"
+            formControlName="checkInDate">
+
+        </div>
+
+        <!-- Check Out -->
+
+        <div class="mb-3">
+
+          <label>Check-Out Date</label>
+
+          <input
+            type="date"
+            class="form-control"
+            formControlName="checkOutDate">
+
+        </div>
+
+        <!-- Guests -->
+
+        <div class="mb-3">
+
+          <label>Guests</label>
+
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Guests"
+            formControlName="guests">
+
+        </div>
+
+        <!-- Room Type -->
+
+        <div class="mb-3">
+
+          <label>Room Type</label>
+
+          <select
+            class="form-control"
+            formControlName="roomType">
+
+            <option value="">
+              Select Room
+            </option>
+
+            <option value="Single">
+              Single
+            </option>
+
+            <option value="Double">
+              Double
+            </option>
+
+            <option value="Suite">
+              Suite
+            </option>
+
+          </select>
+
+        </div>
+
+        <!-- Coupon -->
+
+        <div class="mb-4">
+
+          <label>Coupon Code</label>
+
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Coupon"
+            formControlName="couponCode">
+
+        </div>
+
+        <!-- Total -->
+
+        <div class="total-section">
+
+          <h4>
+            Total Amount:
+            ₹{{ totalAmount }}
+          </h4>
+
+        </div>
+
+        <!-- Button -->
+
+        <button
+          type="button"
+          class="booking-btn"
+          (click)="submitBooking()">
+
+          {{ loading ? 'Processing...' : 'Confirm Booking' }}
+
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,139 @@
+.summary-page{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:
+  linear-gradient(
+    135deg,
+    #2563EB,
+    #06B6D4
+  );
+  padding:40px;
+}
+
+.summary-container{
+  width:100%;
+  max-width:1200px;
+  display:flex;
+  overflow:hidden;
+  border-radius:25px;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(18px);
+  box-shadow:0 8px 32px rgba(0,0,0,0.2);
+}
+
+.summary-left{
+  width:45%;
+  padding:50px;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.summary-left h1{
+  font-size:3rem;
+  font-weight:700;
+}
+
+.summary-left p{
+  margin:20px 0;
+  font-size:1.1rem;
+}
+
+.summary-left img{
+  width:100%;
+  border-radius:20px;
+  margin-top:20px;
+}
+
+.summary-right{
+  width:55%;
+  background:white;
+  padding:60px;
+}
+
+.summary-right h2{
+  font-size:2rem;
+  font-weight:700;
+  color:#0F172A;
+}
+
+.reservation{
+  margin:15px 0 30px;
+  font-size:1rem;
+}
+
+.reservation span{
+  color:#2563EB;
+  font-weight:700;
+}
+
+.summary-card{
+  background:#F8FAFC;
+  padding:25px;
+  border-radius:18px;
+}
+
+.summary-row{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:18px;
+}
+
+.summary-row span{
+  color:#64748B;
+}
+
+.summary-row strong{
+  color:#0F172A;
+}
+
+.discount strong{
+  color:#10B981;
+}
+
+.total{
+  font-size:1.2rem;
+}
+
+.total strong{
+  color:#2563EB;
+}
+
+.download-btn{
+  width:100%;
+  height:50px;
+  margin-top:25px;
+  border:none;
+  border-radius:12px;
+  background:
+  linear-gradient(
+    135deg,
+    #2563EB,
+    #06B6D4
+  );
+  color:white;
+  font-size:1rem;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.download-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px rgba(37,99,235,0.3);
+}
+
+@media(max-width:900px){
+
+  .summary-container{
+    flex-direction:column;
+  }
+
+  .summary-left,
+  .summary-right{
+    width:100%;
+  }
+
+}

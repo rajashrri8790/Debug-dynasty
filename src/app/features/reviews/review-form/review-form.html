@@ -1,0 +1,92 @@
+<div class="review-page">
+
+  <div class="review-container glass-card">
+
+    <h1>Write a Review</h1>
+
+    <p>
+      Share your luxury hotel experience
+    </p>
+
+    <form [formGroup]="reviewForm">
+
+      <!-- User Name -->
+
+      <div class="form-group">
+
+        <label>Your Name</label>
+
+        <input
+          type="text"
+          placeholder="Enter your name"
+          formControlName="userName">
+
+      </div>
+
+      <!-- Hotel Name -->
+
+      <div class="form-group">
+
+        <label>Hotel Name</label>
+
+        <input
+          type="text"
+          placeholder="Enter hotel name"
+          formControlName="hotelName">
+
+      </div>
+
+      <!-- Rating -->
+
+      <div class="form-group">
+
+        <label>Rating</label>
+
+        <div class="stars">
+
+          <span
+            *ngFor="let star of stars"
+
+            (click)="setRating(star)"
+
+            [class.active]="star <= selectedRating">
+
+            ★
+
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- Review Message -->
+
+      <div class="form-group">
+
+        <label>Review</label>
+
+        <textarea
+          rows="5"
+          placeholder="Write your experience..."
+          formControlName="reviewMessage">
+
+        </textarea>
+
+      </div>
+
+      <!-- Button -->
+
+      <button
+        type="button"
+        class="submit-btn"
+        (click)="submitReview()">
+
+        {{ loading ? 'Submitting...' : 'Submit Review' }}
+
+      </button>
+
+    </form>
+
+  </div>
+
+</div>

@@ -1,0 +1,124 @@
+<div class="details-page">
+
+  <!-- Banner -->
+
+  <div class="banner">
+
+    <img
+      [src]="hotel.image"
+      alt="Hotel">
+
+    <div class="overlay">
+
+      <h1>{{ hotel.hotelName }}</h1>
+
+      <p>
+
+        📍 {{ hotel.location }}
+
+      </p>
+
+      <div class="rating">
+
+        ⭐ {{ hotel.rating }}
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Main Content -->
+
+  <div class="container">
+
+    <!-- Description -->
+
+    <div class="glass-card section">
+
+      <h2>About Hotel</h2>
+
+      <p>
+        {{ hotel.description }}
+      </p>
+
+    </div>
+
+    <!-- Amenities -->
+
+    <div class="glass-card section">
+
+      <h2>Amenities</h2>
+
+      <div class="amenities-grid">
+
+        <div
+          class="amenity"
+          *ngFor="let amenity of hotel.amenities">
+
+          ✔ {{ amenity }}
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Rooms -->
+
+    <div class="glass-card section">
+
+      <h2>Available Rooms</h2>
+
+      <div
+        class="room-card"
+        *ngFor="let room of hotel.rooms">
+
+        <div>
+
+          <h3>{{ room.type }}</h3>
+
+        </div>
+
+        <div>
+
+          <h3>
+            ₹{{ room.price }}
+          </h3>
+
+        </div>
+
+        <button
+          routerLink="/booking-form">
+
+          Book Now
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- Attractions -->
+
+    <div class="glass-card section">
+
+      <h2>Nearby Attractions</h2>
+
+      <div class="attractions-grid">
+
+        <div
+          class="attraction-card"
+          *ngFor="let attraction of hotel.nearbyAttractions">
+
+          📍 {{ attraction }}
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,29 @@
+.hero-section{
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267')
+  center/cover no-repeat;
+}
+
+.overlay{
+  height:100%;
+  background:rgba(15,23,42,0.6);
+}
+
+.hero-content{
+  color:white;
+  padding-top:250px;
+}
+
+.hero-content h1{
+  font-size:4rem;
+  font-weight:700;
+}
+
+.hotel-card{
+  overflow:hidden;
+  transition:0.4s;
+}
+
+.hotel-card:hover{
+  transform:translateY(-10px);
+}

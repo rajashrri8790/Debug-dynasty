@@ -1,0 +1,63 @@
+<nav class="navbar">
+
+  <!-- Logo -->
+
+  <div class="logo">
+
+    <h1>StayEase</h1>
+
+  </div>
+
+  <!-- Navigation -->
+
+  <ul
+    class="nav-links"
+    [class.active]="isMenuOpen">
+
+    <li
+      *ngFor="let item of navItems">
+
+      <a
+        [routerLink]="item.route">
+
+        {{ item.title }}
+
+      </a>
+
+    </li>
+
+  </ul>
+
+  <!-- Right Section -->
+
+  <div class="right-section">
+
+    <button
+      class="login-btn"
+      routerLink="/login">
+
+      Login
+
+    </button>
+
+    <button
+      class="register-btn"
+      routerLink="/register">
+
+      Register
+
+    </button>
+
+    <!-- Mobile Menu -->
+
+    <div
+      class="menu-toggle"
+      (click)="toggleMenu()">
+
+      ☰
+
+    </div>
+
+  </div>
+
+</nav>
