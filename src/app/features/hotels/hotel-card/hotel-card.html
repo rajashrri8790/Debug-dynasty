@@ -1,0 +1,62 @@
+<div class="hotel-card glass-card">
+
+  <!-- Hotel Image -->
+
+  <div class="hotel-image">
+
+    <img
+      [src]="hotel.image"
+      alt="Hotel Image">
+
+    <div class="rating">
+
+      ⭐ {{ hotel.rating }}
+
+    </div>
+
+  </div>
+
+  <!-- Hotel Details -->
+
+  <div class="hotel-content">
+
+    <h2>
+      {{ hotel.hotelName }}
+    </h2>
+
+    <p class="location">
+
+      📍 {{ hotel.location }}
+
+    </p>
+
+    <p class="description">
+
+      {{ hotel.description }}
+
+    </p>
+
+    <!-- Bottom -->
+
+    <div class="bottom-section">
+
+      <div class="price">
+
+        ₹{{ hotel.price }}
+
+        <span>/ night</span>
+
+      </div>
+
+      <button
+        routerLink="/booking-form">
+
+        Book Now
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

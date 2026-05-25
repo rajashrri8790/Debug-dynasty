@@ -1,0 +1,108 @@
+.review-page{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:
+  linear-gradient(
+    135deg,
+    #2563EB,
+    #06B6D4
+  );
+  padding:40px;
+}
+
+.review-container{
+  width:100%;
+  max-width:700px;
+  padding:40px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(12px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.glass-card{
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(12px);
+}
+
+.review-container h1{
+  text-align:center;
+  color:#0F172A;
+  margin-bottom:10px;
+}
+
+.review-container p{
+  text-align:center;
+  color:#64748B;
+  margin-bottom:30px;
+}
+
+.form-group{
+  margin-bottom:20px;
+}
+
+.form-group label{
+  display:block;
+  margin-bottom:8px;
+  color:#0F172A;
+  font-weight:600;
+}
+
+.form-group input,
+.form-group textarea{
+  width:100%;
+  border:none;
+  outline:none;
+  border-radius:14px;
+  padding:15px;
+  background:#F1F5F9;
+  font-size:1rem;
+}
+
+.stars{
+  display:flex;
+  gap:10px;
+  font-size:2rem;
+  cursor:pointer;
+}
+
+.stars span{
+  color:#CBD5E1;
+  transition:0.3s;
+}
+
+.stars span.active{
+  color:#FACC15;
+}
+
+.submit-btn{
+  width:100%;
+  border:none;
+  border-radius:14px;
+  background:
+  linear-gradient(
+    135deg,
+    #2563EB,
+    #06B6D4
+  );
+  color:white;
+  font-size:1rem;
+  font-weight:600;
+  padding:15px;
+  transition:0.3s;
+}
+
+.submit-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px rgba(37,99,235,0.3);
+}
+
+@media(max-width:768px){
+
+  .review-container{
+    padding:25px;
+  }
+
+}

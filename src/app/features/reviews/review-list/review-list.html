@@ -1,0 +1,76 @@
+<div class="review-list-page">
+
+  <div class="review-container">
+
+    <!-- Header -->
+
+    <div class="header-section">
+
+      <h1>Customer Reviews</h1>
+
+      <p>
+        See what guests say about their luxury stays
+      </p>
+
+    </div>
+
+    <!-- Reviews -->
+
+    <div
+      class="review-card glass-card"
+      *ngFor="let review of reviews">
+
+      <!-- Top -->
+
+      <div class="review-top">
+
+        <div>
+
+          <h2>{{ review.userName }}</h2>
+
+          <p class="hotel-name">
+
+            {{ review.hotelName }}
+
+          </p>
+
+        </div>
+
+        <div class="rating">
+
+          <span
+            *ngFor="let star of [].constructor(review.rating)">
+
+            ★
+
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- Review -->
+
+      <p class="comment">
+
+        "{{ review.comment }}"
+
+      </p>
+
+      <!-- Footer -->
+
+      <div class="review-footer">
+
+        <span>
+
+          📅 {{ review.date }}
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

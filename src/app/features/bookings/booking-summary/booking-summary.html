@@ -1,0 +1,164 @@
+<div class="summary-page">
+
+  <div class="summary-container glass-card">
+
+    <!-- Left Side -->
+
+    <div class="summary-left">
+
+      <h1>Booking Confirmed 🎉</h1>
+
+      <p>
+        Your luxury stay has been reserved successfully.
+      </p>
+
+      <img
+        src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+        alt="Hotel">
+
+    </div>
+
+    <!-- Right Side -->
+
+    <div class="summary-right">
+
+      <h2>Booking Summary</h2>
+
+      <p class="reservation">
+
+        Reservation No:
+        <span>
+          {{ booking.reservationNumber }}
+        </span>
+
+      </p>
+
+      <div class="summary-card">
+
+        <div class="summary-row">
+
+          <span>Hotel</span>
+
+          <strong>
+            {{ booking.hotelName }}
+          </strong>
+
+        </div>
+
+        <div class="summary-row">
+
+          <span>Room Type</span>
+
+          <strong>
+            {{ booking.roomType }}
+          </strong>
+
+        </div>
+
+        <div class="summary-row">
+
+          <span>Guest Name</span>
+
+          <strong>
+            {{ booking.guestName }}
+          </strong>
+
+        </div>
+
+        <div class="summary-row">
+
+          <span>Guests</span>
+
+          <strong>
+            {{ booking.guests }}
+          </strong>
+
+        </div>
+
+        <div class="summary-row">
+
+          <span>Check-In</span>
+
+          <strong>
+            {{ booking.checkInDate }}
+          </strong>
+
+        </div>
+
+        <div class="summary-row">
+
+          <span>Check-Out</span>
+
+          <strong>
+            {{ booking.checkOutDate }}
+          </strong>
+
+        </div>
+
+        <div class="summary-row">
+
+          <span>Total Nights</span>
+
+          <strong>
+            {{ booking.nights }}
+          </strong>
+
+        </div>
+
+        <hr>
+
+        <div class="summary-row">
+
+          <span>Room Charges</span>
+
+          <strong>
+            ₹{{ booking.roomPrice }}
+          </strong>
+
+        </div>
+
+        <div class="summary-row">
+
+          <span>Taxes</span>
+
+          <strong>
+            ₹{{ booking.taxes }}
+          </strong>
+
+        </div>
+
+        <div class="summary-row discount">
+
+          <span>Coupon Discount</span>
+
+          <strong>
+            - ₹{{ booking.couponDiscount }}
+          </strong>
+
+        </div>
+
+        <hr>
+
+        <div class="summary-row total">
+
+          <span>Total Amount</span>
+
+          <strong>
+            ₹{{ booking.totalAmount }}
+          </strong>
+
+        </div>
+
+      </div>
+
+      <button class="download-btn">
+
+        Download Invoice
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

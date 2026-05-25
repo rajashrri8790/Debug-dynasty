@@ -1,0 +1,150 @@
+<div class="dashboard-page">
+
+  <!-- Sidebar -->
+
+  <div class="sidebar">
+
+    <h2>StayEase</h2>
+
+    <ul>
+
+      <li>🏠 Dashboard</li>
+
+      <li>🏨 Hotels</li>
+
+      <li>🛏️ Rooms</li>
+
+      <li>📅 Bookings</li>
+
+      <li>💰 Revenue</li>
+
+      <li>⭐ Reviews</li>
+
+      <li>⚙️ Settings</li>
+
+    </ul>
+
+  </div>
+
+  <!-- Main Content -->
+
+  <div class="main-content">
+
+    <!-- Topbar -->
+
+    <div class="topbar glass-card">
+
+      <h1>Admin Dashboard</h1>
+
+      <button class="profile-btn">
+        Admin
+      </button>
+
+    </div>
+
+    <!-- Cards -->
+
+    <div class="cards-grid">
+
+      <div
+        class="dashboard-card glass-card"
+        *ngFor="let card of dashboardCards">
+
+        <div class="icon">
+          {{ card.icon }}
+        </div>
+
+        <h2>{{ card.count }}</h2>
+
+        <p>{{ card.title }}</p>
+
+      </div>
+
+    </div>
+
+    <!-- Analytics -->
+
+    <div class="analytics-section">
+
+      <div class="chart-card glass-card">
+
+        <h3>Revenue Analytics</h3>
+
+        <div class="chart-placeholder">
+
+          📊 Revenue Chart
+
+        </div>
+
+      </div>
+
+      <div class="chart-card glass-card">
+
+        <h3>Customer Growth</h3>
+
+        <div class="chart-placeholder">
+
+          📈 Growth Chart
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Recent Bookings -->
+
+    <div class="bookings-section glass-card">
+
+      <h3>Recent Bookings</h3>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>Customer</th>
+
+            <th>Hotel</th>
+
+            <th>Amount</th>
+
+            <th>Status</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr
+            *ngFor="let booking of recentBookings">
+
+            <td>{{ booking.customer }}</td>
+
+            <td>{{ booking.hotel }}</td>
+
+            <td>{{ booking.amount }}</td>
+
+            <td>
+
+              <span class="status">
+
+                {{ booking.status }}
+
+              </span>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>

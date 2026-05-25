@@ -1,0 +1,33 @@
+<div class="login-page">
+
+  <div class="glass-card login-card">
+
+    <h2>Welcome Back</h2>
+
+    <form [formGroup]="loginForm">
+
+      <input
+      type="email"
+      placeholder="Email"
+      formControlName="email"
+      class="form-control mb-3">
+
+      <input
+      type="password"
+      placeholder="Password"
+      formControlName="password"
+      class="form-control mb-3">
+
+      <button
+      class="gradient-btn w-100"
+      (click)="login()">
+
+      Login
+
+      </button>
+
+    </form>
+
+  </div>
+
+</div>

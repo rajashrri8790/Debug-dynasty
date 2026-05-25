@@ -1,0 +1,51 @@
+<div class="sidebar">
+
+  <!-- Logo -->
+
+  <div class="logo">
+
+    <h1>StayEase</h1>
+
+  </div>
+
+  <!-- Menu -->
+
+  <ul class="menu-list">
+
+    <li
+      *ngFor="let item of menuItems"
+
+      routerLink="{{ item.route }}"
+
+      routerLinkActive="active">
+
+      <span class="icon">
+
+        {{ item.icon }}
+
+      </span>
+
+      <span class="title">
+
+        {{ item.title }}
+
+      </span>
+
+    </li>
+
+  </ul>
+
+  <!-- Bottom -->
+
+  <div class="sidebar-footer">
+
+    <button
+      class="logout-btn">
+
+      Logout
+
+    </button>
+
+  </div>
+
+</div>

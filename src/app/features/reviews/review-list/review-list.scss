@@ -1,0 +1,93 @@
+.review-list-page{
+  min-height:100vh;
+  background:#F8FAFC;
+  padding:50px 20px;
+}
+
+.review-container{
+  max-width:1000px;
+  margin:auto;
+}
+
+.header-section{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.header-section h1{
+  font-size:3rem;
+  color:#0F172A;
+  font-weight:700;
+}
+
+.header-section p{
+  color:#64748B;
+  margin-top:10px;
+}
+
+.review-card{
+  padding:30px;
+  border-radius:25px;
+  margin-bottom:25px;
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(12px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.review-card:hover{
+  transform:translateY(-5px);
+}
+
+.glass-card{
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(12px);
+}
+
+.review-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.review-top h2{
+  color:#0F172A;
+  margin-bottom:5px;
+}
+
+.hotel-name{
+  color:#64748B;
+}
+
+.rating{
+  color:#FACC15;
+  font-size:1.5rem;
+}
+
+.comment{
+  color:#475569;
+  line-height:1.8;
+  font-size:1rem;
+  margin-bottom:20px;
+}
+
+.review-footer{
+  display:flex;
+  justify-content:flex-end;
+  color:#64748B;
+}
+
+@media(max-width:768px){
+
+  .header-section h1{
+    font-size:2.2rem;
+  }
+
+  .review-top{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+  }
+
+}

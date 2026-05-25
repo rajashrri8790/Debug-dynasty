@@ -1,0 +1,192 @@
+<div class="dashboard-page">
+
+  <!-- Sidebar -->
+
+  <div class="sidebar">
+
+    <h2>StayEase</h2>
+
+    <ul>
+
+      <li>🏠 Dashboard</li>
+
+      <li>📅 My Bookings</li>
+
+      <li>⭐ Saved Hotels</li>
+
+      <li>🎁 Rewards</li>
+
+      <li>👤 Profile</li>
+
+      <li>⚙️ Settings</li>
+
+    </ul>
+
+  </div>
+
+  <!-- Main Content -->
+
+  <div class="main-content">
+
+    <!-- Topbar -->
+
+    <div class="topbar glass-card">
+
+      <div>
+
+        <h1>Welcome Back 👋</h1>
+
+        <p>
+          Manage your hotel bookings easily
+        </p>
+
+      </div>
+
+      <button class="profile-btn">
+        Sameera
+      </button>
+
+    </div>
+
+    <!-- Reward Card -->
+
+    <div class="reward-card glass-card">
+
+      <div>
+
+        <h2>Loyalty Rewards</h2>
+
+        <p>
+          Earn points with every booking
+        </p>
+
+      </div>
+
+      <div class="points">
+
+        {{ loyaltyPoints }}
+
+        <span>Points</span>
+
+      </div>
+
+    </div>
+
+    <!-- Upcoming Bookings -->
+
+    <div class="section glass-card">
+
+      <h2>Upcoming Bookings</h2>
+
+      <div
+        class="booking-card"
+        *ngFor="let booking of upcomingBookings">
+
+        <div>
+
+          <h3>{{ booking.hotel }}</h3>
+
+          <p>{{ booking.room }}</p>
+
+        </div>
+
+        <div>
+
+          <p>
+            {{ booking.checkIn }}
+          </p>
+
+          <p>
+            {{ booking.checkOut }}
+          </p>
+
+        </div>
+
+        <span class="status">
+
+          {{ booking.status }}
+
+        </span>
+
+      </div>
+
+    </div>
+
+    <!-- Booking History -->
+
+    <div class="section glass-card">
+
+      <h2>Booking History</h2>
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>Hotel</th>
+
+            <th>Amount</th>
+
+            <th>Status</th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr
+            *ngFor="let history of bookingHistory">
+
+            <td>{{ history.hotel }}</td>
+
+            <td>{{ history.amount }}</td>
+
+            <td>
+
+              <span class="completed">
+
+                {{ history.status }}
+
+              </span>
+
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <!-- Saved Hotels -->
+
+    <div class="section glass-card">
+
+      <h2>Saved Hotels</h2>
+
+      <div class="saved-grid">
+
+        <div
+          class="saved-card"
+          *ngFor="let hotel of savedHotels">
+
+          <h3>{{ hotel.name }}</h3>
+
+          <p>{{ hotel.location }}</p>
+
+          <button>
+            View Hotel
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
